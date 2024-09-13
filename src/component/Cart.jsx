@@ -22,7 +22,7 @@ const Cart = () => {
   };
 
   return (
-    <div className=" w-[400px] h-[650px] bg-[#EE6F57] flex flex-col justify-between overflow-hidden rounded-lg">
+    <div className=" w-[450px] h-[650px] bg-[#EE6F57] flex flex-col justify-between overflow-hidden rounded-lg">
       <Header />
       <div className=" h-[600px] w-full mt-2 px-2 overflow-auto bg-[#F5F5F5] flex flex-col items-center">
         <div className="  w-[150px] h-[80px] flex justify-center items-center mt-3 text-[#604CC3] font-bold text-lg">
