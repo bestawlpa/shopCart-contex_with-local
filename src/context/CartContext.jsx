@@ -8,6 +8,12 @@ export const CartProvider = ({ children }) => {
     return savedCart ? JSON.parse(savedCart) : [];
   });
 
+  const [isConfirmed, setIsConfirmed] = useState(false);
+
+  const confirmCart = () => {
+    setIsConfirmed(true);
+  };
+
   useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(cart));
   }, [cart]);
@@ -76,6 +82,8 @@ export const CartProvider = ({ children }) => {
         removeFromCart,
         increaseQuantity,
         decreaseQuantity,
+        isConfirmed,
+        confirmCart,
       }}
     >
       {children}

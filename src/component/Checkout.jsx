@@ -3,7 +3,7 @@ import { CartContext } from "../context/CartContext";
 import Header from "./Header";
 
 const Checkout = () => {
-  const { cart } = useContext(CartContext);
+  const { cart, isConfirmed } = useContext(CartContext);
   const [orderDetails, setOrderDetails] = useState({
     name: "",
     email: "",
@@ -21,6 +21,10 @@ const Checkout = () => {
     e.preventDefault();
     console.log("Order Placed:", orderDetails, cart);
   };
+
+  if (!isConfirmed) {
+    return <div>Please confirm your cart first.</div>;
+  }
 
   return (
     <div className=" w-[400px] h-[650px] bg-[#EE6F57] flex flex-col justify-between overflow-hidden rounded-lg">
