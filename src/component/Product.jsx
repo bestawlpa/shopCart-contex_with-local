@@ -15,14 +15,14 @@ const Product = () => {
   }, []);
 
   return (
-    <div className=" w-[450px] h-[630px] flex flex-col justify-between bg-[#EE6F57] overflow-hidden rounded-lg">
+    <div className=" w-[600px] h-[650px] flex flex-col justify-between bg-[#EE6F57] overflow-hidden rounded-lg">
       <Header />
-      <div className=" h-[600px] w-full mt-2 px-2 overflow-auto bg-[#F5F5F5] ">
-        <div className="product-list grid grid-cols-2 gap-2 m-4 ">
+      <div className=" h-[600px] w-full flex justify-center items-start mt-2 p-2 overflow-auto bg-[#F5F5F5] ">
+        <div className="product-list grid grid-cols-2 gap-4 m-4  ">
           {products.map((product) => (
             <div
               key={product.product_id}
-              className="product-card m-2 bg-white rounded-xl border-solid border-2 border-[#5C636E] overflow-hidden w-[180px] h-[260px]"
+              className="product-card m-6 bg-white rounded-xl border-solid border-2 border-[#5C636E] overflow-hidden w-[180px] h-[260px]"
             >
               <img
                 src={product.images[0]}

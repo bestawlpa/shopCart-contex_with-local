@@ -74,6 +74,11 @@ export const CartProvider = ({ children }) => {
     });
   };
 
+  const clearCart = () => {
+    setCart([]);
+    setIsConfirmed(false);
+  };
+
   return (
     <CartContext.Provider
       value={{
@@ -84,6 +89,7 @@ export const CartProvider = ({ children }) => {
         decreaseQuantity,
         isConfirmed,
         confirmCart,
+        clearCart,
       }}
     >
       {children}
